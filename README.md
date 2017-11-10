@@ -184,45 +184,48 @@ void test_Circle(){
     // test of default constructor
     Circle p13;
     cout << getCenter << getRadius << getColor << endl;
-    Circle p23;
-    Circle p33;
-    Circle p43;
-    Circle p53;
+   
     
     // test of the other constructor
-    Circle p(3, 9);
-    cout << p << endl;
+    Circle ppp( 9);
+    cout << ppp << endl;
     
-    // test of member function: setX()
-    p13.setX(5);
-    p23.setX(0);
-    p33.setX(100);
-    p43.setX(99);
-    p53.setX(-1);
-    // test of member function: setY()
-    p13.setY(3);
-    p23.setX(0);
-    p33.setX(100);
-    p43.setX(99);
-    p53.setX(-1);
+    // test of member function: setCenter()
+    Point a = (5, 0);
+    p13.setCenter(a);
+    Point b = (0, 0)
+    p23.setCenter(b);
+    Point c = (100, 100)
+    p33.setCenter(c);
+    Point d = (5, 0)
+    p43.setCenter(d);
+    Point e = (67, 35)
+    p53.setCenter(e);
+    // test of member function: setRadius()
+    p13.setRadius(3);
+    p23.setRadius(0);
+    p33.setRadius(100);
+    p43.setRadius(99);
+    p53.setRadius(-1);
+    // test of member function: setColor()
+    Color color1 = (0, 0, 0);
+    p13.setColor(color1);
+    Color color2 = (255, 0, 0);
+    p23.setColor(color2);
+    Color color3 = (0, 255, 0);
+    p33.setColor(color3);
+    Color color4 = (0, 0, 255);
+    p43.setColor(color4);
+    Color color5 = (255, 255, 255);
+    p53.setColor(color4);
+    Color color6 = (67, 2, 99);
     
     // test of member functions getX() and getY()
-    cout << "( " << p1.getX()
-    << ", " << p1.getY()
-    << " )" << endl;
-    cout << "( " << p2.getX()
-    << ", " << p2.getY()
-    << " )" << endl;
-    cout << "( " << p3.getX()
-    << ", " << p3.getY()
-    << " )" << endl;
-    cout << "( " << p4.getX()
-    << ", " << p4.getY()
-    << " )" << endl;
-    cout << "( " << p5.getX()
-    << ", " << p5.getY()
-    << " )" << endl;
-    
+    cout << p13.getCenter() << p13.getRadius() << p13.getColor() << endl;
+    cout << p23.getCenter() << p23.getRadius() << p23.getColor() << endl;
+    cout << p33.getCenter() << p33.getRadius() << p33.getColor() << endl;
+    cout << p43.getCenter() << p43.getRadius() << p43.getColor() << endl;
+    cout << p53.getCenter() << p53.getRadius() << p53.getColor() << endl;
     // you can also do cin >> p1;
     p1.read(cin);
     cout << p1 << endl;
@@ -243,4 +246,44 @@ void test_Shape(){
 
 void test_Triangle(){
   
+}
+
+
+
+
+void loadFile(Graphics& drawer)
+{   ifstream ins;
+    string fileName;
+    string remainingChars;
+    char shapeLetter;
+    //opens file, sets file to fileName
+    fileName = openFile(ins);
+    drawer.clear();
+   //reads in first character, determines shape, calls the shape's functions
+   while (ins >> shapeLetter) {
+       Triangle createTriangle;
+       Rectangle createRectangle;
+       Line createLine;
+       Circle createCircle;
+       
+        if (shapeLetter == 'L') {
+            ins >> createLine;
+            createLine.draw(drawer);
+        } else if (shapeLetter == 'C') {
+            createCircle.read(ins);
+            createCircle.draw(drawer);
+        } else if (shapeLetter == 'T') {
+            createTriangle.read(ins);
+            createTriangle.draw(drawer);
+        } else if (shapeLetter == 'R') {
+            createRectangle.read(ins);
+            createRectangle.draw(drawer);
+        } else {
+            getline(ins, remainingChars);
+            drawer.clear();
+            cout << "Error in input file: " << shapeLetter << remainingChars;
+        }
+   }
+    ins.close();
+    cout << "[Loaded " << fileName << "]" << endl;
 }
