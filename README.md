@@ -333,39 +333,3 @@ void test_Triangle(){
 
 
 
-void loadFile(Graphics& drawer)
-{   ifstream ins;
-    string fileName;
-    string remainingChars;
-    char shapeLetter;
-    //opens file, sets file to fileName
-    fileName = openFile(ins);
-    drawer.clear();
-   //reads in first character, determines shape, calls the shape's functions
-   while (ins >> shapeLetter) {
-       Triangle createTriangle;
-       Rectangle createRectangle;
-       Line createLine;
-       Circle createCircle;
-       
-        if (shapeLetter == 'L') {
-            ins >> createLine;
-            createLine.draw(drawer);
-        } else if (shapeLetter == 'C') {
-            createCircle.read(ins);
-            createCircle.draw(drawer);
-        } else if (shapeLetter == 'T') {
-            createTriangle.read(ins);
-            createTriangle.draw(drawer);
-        } else if (shapeLetter == 'R') {
-            createRectangle.read(ins);
-            createRectangle.draw(drawer);
-        } else {
-            getline(ins, remainingChars);
-            drawer.clear();
-            cout << "Error in input file: " << shapeLetter << remainingChars;
-        }
-   }
-    ins.close();
-    cout << "[Loaded " << fileName << "]" << endl;
-}
