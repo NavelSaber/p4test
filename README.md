@@ -79,12 +79,12 @@ void test_Color(){
    
     
     // test of the other constructor
-    Point p(3, 9, 199);
+    Color p(3, 9, 199);
     cout << p << endl;
-    Point p21(255, 0, 0);
-    Point p31(0, 0, 255);
-    Point p41(0, 255, 0);
-    Point p51(163, 9, 176);
+    Color p21(255, 0, 0);
+    Color p31(0, 0, 255);
+    Color p41(0, 255, 0);
+    Color p51(163, 9, 176);
  
     
     
@@ -131,14 +131,101 @@ void test_Color(){
 }
 
 void test_Graphics(){
+
+    // test of default constructor
+    Graphics p1;
+    cout << p1 << endl;
+  
     
+    // test of the other constructor
+    Graphics pp(3, 9);
+    cout << pp << endl;
+    Graphics p22(0, 100, ;
+    Graphics p32;
+    Graphics p42;
+    Graphics p52;
+    
+    // test of member function: clear()
+    \
+
+    
+    // you can also do cin >> p1;
+    p1.read(cin);
+    cout << p1 << endl;
 }
 
+
+
 void test_pics(){
+    // test of writeFile
+    
+  
+    
+    // test of the other constructor
+    Graphics pp(3, 9);
+    cout << pp << endl;
+    Graphics p22(0, 100, ;
+    Graphics p32;
+    Graphics p42;
+    Graphics p52;
+    
+    // test of member function: clear()
+    \
+
+    
+    // you can also do cin >> p1;
+    p1.read(cin);
+    cout << p1 << endl;
     
 }
 
 void test_Circle(){
+
+    // test of default constructor
+    Circle p13;
+    cout << p1 << endl;
+    Circle p23;
+    Circle p33;
+    Circle p43;
+    Circle p53;
+    
+    // test of the other constructor
+    Circle p(3, 9);
+    cout << p << endl;
+    
+    // test of member function: setX()
+    p13.setX(5);
+    p23.setX(0);
+    p33.setX(100);
+    p43.setX(99);
+    p53.setX(-1);
+    // test of member function: setY()
+    p13.setY(3);
+    p23.setX(0);
+    p33.setX(100);
+    p43.setX(99);
+    p53.setX(-1);
+    
+    // test of member functions getX() and getY()
+    cout << "( " << p1.getX()
+    << ", " << p1.getY()
+    << " )" << endl;
+    cout << "( " << p2.getX()
+    << ", " << p2.getY()
+    << " )" << endl;
+    cout << "( " << p3.getX()
+    << ", " << p3.getY()
+    << " )" << endl;
+    cout << "( " << p4.getX()
+    << ", " << p4.getY()
+    << " )" << endl;
+    cout << "( " << p5.getX()
+    << ", " << p5.getY()
+    << " )" << endl;
+    
+    // you can also do cin >> p1;
+    p1.read(cin);
+    cout << p1 << endl;
     
 }
 
