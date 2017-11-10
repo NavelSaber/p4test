@@ -285,9 +285,6 @@ void test_Rectangle(){
     
 }
 
-void test_Shape(){
-    
-}
 
 void test_Triangle(){
   
