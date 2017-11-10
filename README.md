@@ -315,7 +315,7 @@ void test_Triangle(){
   cout << t1.getVertexOne << t1.getVertexTwo << t1.getVertexThree << t1.getVertexOneColor << t1.getVertexTwoColor << t1.getVertexThreeColor;
   
   t1.setVertexThreeColor(v61);
-  
+  cout << t1.getVertexOne << t1.getVertexTwo << t1.getVertexThree << t1.getVertexOneColor << t1.getVertexTwoColor << t1.getVertexThreeColor;
   
   t1.setVertexOneColor(c41);
   cout << t1.getVertexOne << t1.getVertexTwo << t1.getVertexThree << t1.getVertexOneColor << t1.getVertexTwoColor << t1.getVertexThreeColor;
