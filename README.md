@@ -1,4 +1,27 @@
 # p4test
+void test_point();
+void test_Color();
+void test_Graphics();
+void test_pics();
+void test_Circle();
+void test_Line();
+void test_Rectangle();
+void test_Shape();
+void test_Triangle();
+
+int main(){
+    test_point();
+    test_Color();
+    test_Graphics();
+    test_pics();
+    test_Circle();
+    test_Line();
+    test_Rectangle();
+    test_Shape();
+    test_Triangle();
+}
+
+void test_point(){
  //Point
     // test of default constructor
     Point p1;
@@ -45,3 +68,35 @@
     // you can also do cin >> p1;
     p1.read(cin);
     cout << p1 << endl;
+}
+void test_Color(){
+    
+}
+
+void test_Graphics(){
+    
+}
+
+void test_pics(){
+    
+}
+
+void test_Circle(){
+    
+}
+
+void test_Line(){
+    
+}
+
+void test_Rectangle(){
+    
+}
+
+void test_Shape(){
+    
+}
+
+void test_Triangle(){
+  
+}
