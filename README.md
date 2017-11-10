@@ -283,6 +283,41 @@ void test_Line(){
 
 void test_Rectangle(){
     
+  Point v11(20,0);
+  Point v21(21,2);
+  Color c01(120, 20, 103);
+  Color c11(160, 20, 103);
+  Color c21(157, 130, 250);
+  Color c31(43, 170, 230);
+  
+  Triangle t1(v11, v21, c01, c11, c21, c31);
+  cout << t1.getStart << t1.getEnd << t1.getColorTopLeft << t1.getColorTopRight << t1.getColorBottomRight << t1.getColorBottomLeft;
+  
+  Point v41(0,0);
+  Point v51(1,2);
+  Color c71(100, 100, 100);
+  Color c41(100, 100, 100);
+  Color c51(150, 150, 150);
+  Color c61(50, 100, 150);
+  
+  t1.setStart(v41);
+  cout << t1.getStart << t1.getEnd << t1.getColorTopLeft << t1.getColorTopRight << t1.getColorBottomRight << t1.getColorBottomLeft;
+  
+  t1.setEnd(v51);
+  cout << t1.getStart << t1.getEnd << t1.getColorTopLeft << t1.getColorTopRight << t1.getColorBottomRight << t1.getColorBottomLeft;
+  
+  t1.setColorTopLeft(c71);
+  cout << t1.getStart << t1.getEnd << t1.getColorTopLeft << t1.getColorTopRight << t1.getColorBottomRight << t1.getColorBottomLeft;
+  
+  t1.setColorTopRight(c41);
+  cout << t1.getStart << t1.getEnd << t1.getColorTopLeft << t1.getColorTopRight << t1.getColorBottomRight << t1.getColorBottomLeft;
+  
+  t1.setColorBottomRight(c51);
+  cout << t1.getVertexOne << t1.getVertexTwo << t1.getVertexThree << t1.getVertexOneColor << t1.getVertexTwoColor << t1.getVertexThreeColor;
+  
+  t1.setColorBottomLeft(c61);
+  cout << t1.getStart << t1.getEnd << t1.getColorTopLeft << t1.getColorTopRight << t1.getColorBottomRight << t1.getColorBottomLeft;
+    
 }
 
 
