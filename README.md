@@ -1,25 +1,37 @@
 # p4test
-void test_point();
+#include <iostream>
+using namespace std;
+
+#include "Shape.h"
+#include "Circle.h"
+#include "Rectangle.h"
+#include "Line.h"
+#include "Triangle.h"
+
+#include "Color.h"
+#include "Point.h"
+#include "utility.h"
+#include "Graphics.h"
+
+
+
+void test_Point();
 void test_Color();
-void test_Graphics();
-void test_pics();
 void test_Circle();
 void test_Line();
 void test_Rectangle();
 void test_Triangle();
 
 int main(){
-    test_point();
+    test_Point();
     test_Color();
-    test_Graphics();
-    test_pics();
     test_Circle();
     test_Line();
     test_Rectangle();
     test_Triangle();
 }
 
-void test_point(){
+void test_Point(){
     //Point
     // test of default constructor
     Point p1;
@@ -130,56 +142,6 @@ void test_Color(){
     
 }
 
-void test_Graphics(){
-    
-    // test of default constructor
-    Graphics p14;
-    //cout << p14 << endl;
-    
-    
-    // test setPixe()
-    Color k(0, 0, 0);
-    Graphics pp;//(3, 9);
-    //cout << pp << endl;
-    Graphics p22;//(0, 100, ;
-    Graphics p32;
-    Graphics p42;
-    Graphics p52;
-    
-    // test of member function: clear()
-    \
-    
-    
-    // you can also do cin >> p1;
-    //p1.read(cin);
-    //cout << p1 << endl;
-}
-
-
-
-void test_pics(){
-    // test of writeFile
-    
-    
-    
-    // test of the other constructor
-    Graphics pp;//(3, 9);
-    //cout << pp << endl;
-    Graphics p22;//(0, 100, ;
-    Graphics p32;
-    Graphics p42;
-    Graphics p52;
-    
-    // test of member function: clear()
-    
-    
-    
-    // you can also do cin >> p1;
-    //p1.read(cin);
-    //cout << p1 << endl;
-    
-}
-
 void test_Circle(){
     
     // test of default constructor
@@ -190,9 +152,10 @@ void test_Circle(){
     Circle p53;
     cout << p13.getCenter() << p13.getRadius() << p13.getColor() << endl;
     
-    
+    Point pppp(23,6);
+    Color pppc(23, 53, 234);
     // test of the other constructor
-    Circle ppp;
+    Circle ppp(pppp, 5, pppc);
     cout << ppp.getCenter() << ppp.getRadius() << ppp.getColor() << endl;
     
     // test of member function: setCenter()
@@ -339,6 +302,7 @@ void test_Triangle(){
     Color c31(43, 170, 230);
     
     Triangle t1(v11, c11, v21, c21, v31, c31);
+    t1.write(cout);
     cout << t1.getVertexOne() << t1.getVertexTwo() << t1.getVertexThree() << t1.getVertexOneColor() << t1.getVertexTwoColor() << t1.getVertexThreeColor();
     
     Point v41(0,0);
@@ -350,23 +314,26 @@ void test_Triangle(){
     
     t1.setVertexOne(v41);
     cout << t1.getVertexOne() << t1.getVertexTwo() << t1.getVertexThree() << t1.getVertexOneColor() << t1.getVertexTwoColor() << t1.getVertexThreeColor();
+    t1.write(cout);
     
     t1.setVertexTwo(v51);
     cout << t1.getVertexOne() << t1.getVertexTwo() << t1.getVertexThree() << t1.getVertexOneColor() << t1.getVertexTwoColor() << t1.getVertexThreeColor();
+    t1.write(cout);
     
     t1.setVertexThree(v61);
     cout << t1.getVertexOne() << t1.getVertexTwo() << t1.getVertexThree() << t1.getVertexOneColor() << t1.getVertexTwoColor() << t1.getVertexThreeColor();
+    t1.write(cout);
     
     t1.setVertexOneColor(c41);
     cout << t1.getVertexOne() << t1.getVertexTwo() << t1.getVertexThree() << t1.getVertexOneColor() << t1.getVertexTwoColor() << t1.getVertexThreeColor();
+    t1.write(cout);
+    
     t1.setVertexTwoColor(c51);
     cout << t1.getVertexOne() << t1.getVertexTwo() << t1.getVertexThree() << t1.getVertexOneColor() << t1.getVertexTwoColor() << t1.getVertexThreeColor();
+    t1.write(cout);
     
     t1.setVertexThreeColor(c61);
     cout << t1.getVertexOne() << t1.getVertexTwo() << t1.getVertexThree() << t1.getVertexOneColor() << t1.getVertexTwoColor() << t1.getVertexThreeColor();
+    t1.write(cout);
     
 }
-
-
-
-
