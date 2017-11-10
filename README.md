@@ -69,8 +69,65 @@ void test_point(){
     p1.read(cin);
     cout << p1 << endl;
 }
+
 void test_Color(){
+ //Point
+    // test of default constructor
+    Color p11;
+    cout << p1 << endl;
     
+   
+    
+    // test of the other constructor
+    Point p(3, 9, 199);
+    cout << p << endl;
+    Point p21(255, 0, 0);
+    Point p31(0, 0, 255);
+    Point p41(0, 255, 0);
+    Point p51(163, 9, 176);
+ 
+    
+    
+    // test of member function: setRed()
+    p11.setRed(5);
+    p21.setRed(0);
+    p31.setRed(100);
+    p41.setRed(99);
+    p51.setRed(-1);
+    p61.setRed(255);
+    p71.setRed(256);
+    
+    // test of member function: setGreen()
+    p11.setGreen(5);
+    p21.setGreen(0);
+    p31.setGreen(100);
+    p41.setGreen99);
+    p51.setGreen(-1);
+    p61.setGreen(255);
+    p71.setGreen(256);
+    
+    // test of member function: setBlue()
+    p11.setBlue(5);
+    p21.setBlue(0);
+    p31.setBlue(100);
+    p41.setBlue(99);
+    p51.setBlue(-1);
+    p61.setBlue(255);
+    p71.setBlue(256);
+  
+    
+    // test of member functions getters
+    cout << p11.getRed() << p11.getGreen()
+    << p11.getGreen() << endl;
+     cout << p21.getRed() << p21.getGreen()
+    << p21.getGreen() << endl;
+     cout << p31.getRed() << p31.getGreen()
+    << p31.getGreen() << endl;
+     cout << p41.getRed() << p41.getGreen()
+    << p41.getGreen() << endl;
+     cout << p51.getRed() << p51.getGreen()
+    << p51.getGreen() << endl;
+ 
 }
 
 void test_Graphics(){
