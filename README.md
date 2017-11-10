@@ -291,6 +291,43 @@ void test_Shape(){
 
 void test_Triangle(){
   
+  Point v11(20,0);
+  Point v21(20,2);
+  Point v31(11,15);
+  Color c11(160, 20, 103);
+  Color c21(157, 130, 250);
+  Color c31(43, 170, 230);
+  
+  Triangle t1(v11, v21, v31, c11, c21, c31);
+  cout << t1.getVertexOne << t1.getVertexTwo << t1.getVertexThree << t1.getVertexOneColor << t1.getVertexTwoColor << t1.getVertexThreeColor;
+  
+  Point v41(0,0);
+  Point v51(0,2);
+  Point v61(1,1);
+  Color c41(100, 100, 100);
+  Color c51(150, 150, 150);
+  Color c61(50, 100, 150);
+  
+  t1.setVertexOneColor(v41);
+  cout << t1.getVertexOne << t1.getVertexTwo << t1.getVertexThree << t1.getVertexOneColor << t1.getVertexTwoColor << t1.getVertexThreeColor;
+  
+  t1.setVertexTwoColor(v51);
+  cout << t1.getVertexOne << t1.getVertexTwo << t1.getVertexThree << t1.getVertexOneColor << t1.getVertexTwoColor << t1.getVertexThreeColor;
+  
+  t1.setVertexThreeColor(v61);
+  
+  
+  t1.setVertexOneColor(c41);
+  cout << t1.getVertexOne << t1.getVertexTwo << t1.getVertexThree << t1.getVertexOneColor << t1.getVertexTwoColor << t1.getVertexThreeColor;
+  
+  t1.setVertexTwoColor(c51);
+  cout << t1.getVertexOne << t1.getVertexTwo << t1.getVertexThree << t1.getVertexOneColor << t1.getVertexTwoColor << t1.getVertexThreeColor;
+  
+  t1.setVertexThreeColor(c61);
+  cout << t1.getVertexOne << t1.getVertexTwo << t1.getVertexThree << t1.getVertexOneColor << t1.getVertexTwoColor << t1.getVertexThreeColor;
+  
+  
+  
 }
 
 
