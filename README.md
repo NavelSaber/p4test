@@ -139,9 +139,9 @@ void test_Graphics(){
     
     // test setPixe()
     Color k = (0, 0, 0)
-    Graphics pp(3, 9);
-    cout << pp << endl;
-    Graphics p22(0, 100, ;
+    Graphics pp;//(3, 9);
+    //cout << pp << endl;
+    Graphics p22;//(0, 100, ;
     Graphics p32;
     Graphics p42;
     Graphics p52;
@@ -151,8 +151,8 @@ void test_Graphics(){
 
     
     // you can also do cin >> p1;
-    p1.read(cin);
-    cout << p1 << endl;
+    //p1.read(cin);
+    //cout << p1 << endl;
 }
 
 
@@ -163,20 +163,20 @@ void test_pics(){
   
     
     // test of the other constructor
-    Graphics pp(3, 9);
-    cout << pp << endl;
-    Graphics p22(0, 100, ;
+    Graphics pp;//(3, 9);
+    //cout << pp << endl;
+    Graphics p22;//(0, 100, ;
     Graphics p32;
     Graphics p42;
     Graphics p52;
     
     // test of member function: clear()
-    \
+    
 
     
     // you can also do cin >> p1;
-    p1.read(cin);
-    cout << p1 << endl;
+    //p1.read(cin);
+    //cout << p1 << endl;
     
 }
 
