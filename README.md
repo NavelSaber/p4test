@@ -183,7 +183,7 @@ void test_Circle(){
 
     // test of default constructor
     Circle p13;
-    cout << p1 << endl;
+    cout << getCenter << getRadius << getColor << endl;
     Circle p23;
     Circle p33;
     Circle p43;
