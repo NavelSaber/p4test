@@ -85,6 +85,7 @@ void test_Color(){
     // test of default constructor
     Color p11;
     cout << p11 << endl;
+    Cikir p91;
     
     
     
@@ -97,6 +98,7 @@ void test_Color(){
     Color p51(163, 9, 176);
     Color p61(163, 9, 176);
     Color p71(163, 9, 176);
+    Color p81(0, 190, 225);
     
     
     
@@ -108,6 +110,8 @@ void test_Color(){
     p51.setRed(-1);
     p61.setRed(255);
     p71.setRed(256);
+    p81.setRed(254);
+    p91.setRed(1);
     
     // test of member function: setGreen()
     p11.setGreen(5);
@@ -117,6 +121,8 @@ void test_Color(){
     p51.setGreen(-1);
     p61.setGreen(255);
     p71.setGreen(256);
+    p81.setGreen(210);
+    p91.setGreen(1);
     
     // test of member function: setBlue()
     p11.setBlue(5);
@@ -126,19 +132,31 @@ void test_Color(){
     p51.setBlue(-1);
     p61.setBlue(255);
     p71.setBlue(256);
+    p81.setBlue(15);
+    p91.setBlue(1);
     
     
     // test of member functions getters
     cout << p11.getRed() << p11.getGreen()
-    << p11.getGreen() << endl;
+    << p11.getBlue() << endl;
     cout << p21.getRed() << p21.getGreen()
-    << p21.getGreen() << endl;
+    << p21.getBlue() << endl;
     cout << p31.getRed() << p31.getGreen()
-    << p31.getGreen() << endl;
+    << p31.getBlue() << endl;
     cout << p41.getRed() << p41.getGreen()
-    << p41.getGreen() << endl;
+    << p41.getBlue() << endl;
     cout << p51.getRed() << p51.getGreen()
-    << p51.getGreen() << endl;
+    << p51.getBlue() << endl;
+    cout << p61.getRed() << p61.getGreen()
+    << p61.getBlue() << endl;
+    cout << p71.getRed() << p71.getGreen()
+    << p71.getBlue() << endl;
+    cout << p81.getRed() << p81.getGreen()
+    << p81.getBlue() << endl;
+    cout << p91.getRed() << p91.getGreen()
+    << p91.getBlue() << endl;
+    
+    
     
 }
 
