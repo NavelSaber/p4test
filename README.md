@@ -173,6 +173,12 @@ void test_Circle(){
     Color cc5(25, 134, 43);
     
     Circle p13;
+    Circle p63
+    Circle p73;
+    Circle p83;
+    Circle p93;
+    Circle p103;
+    Circle p113;
     Circle p23(pp2, 5, cc2);
     Circle p33(pp3, 13, cc3);
     Circle p43(pp4, 43, cc4);
@@ -184,11 +190,27 @@ void test_Circle(){
     cout << p43.getCenter() << p43.getRadius() << p43.getColor() << endl;
     cout << p53.getCenter() << p53.getRadius() << p53.getColor() << endl;
     
-    Point pppp(23,6);
+     // test of the other constructor
+    Point pppp(23, 6);
     Color pppc(23, 53, 234);
-    // test of the other constructor
     Circle ppp(pppp, 5, pppc);
     cout << ppp.getCenter() << ppp.getRadius() << ppp.getColor() << endl;
+    Point ppppc(0, 0);
+    Color pppcc(255, 0, 0);
+    Circle pppc(ppppc, 5, pppcc);
+    cout << pppc.getCenter() << pppc.getRadius() << pppc.getColor() << endl;
+    Point ppppe(100, 100);
+    Color pppce(90, 0, 234);
+    Circle pppe(ppppe, 5, pppce);
+    cout << pppe.getCenter() << pppe.getRadius() << pppe.getColor() << endl;
+    Point ppppf(90, 3);
+    Color pppcf(89, 1, 1);
+    Circle pppf(pppp, 5, pppc);
+    cout << pppf.getCenter() << pppf.getRadius() << pppf.getColor() << endl;
+    Point ppppr(0, 100);
+    Color pppcr(23, 53, 234);
+    Circle pppr(ppppr, 5, pppcr);
+    cout << pppr.getCenter() << pppr.getRadius() << pppr.getColor() << endl;
     
     // test of member function: setCenter()
     Point a(5, 0);
@@ -207,6 +229,12 @@ void test_Circle(){
     p33.setRadius(100);
     p43.setRadius(99);
     p53.setRadius(-1);
+    p63.setRadius(99);
+    p73.setRadius(-100);
+    p83.setRadius(-50);
+    p93.setRadius(1);
+    p103.setRadius(18);
+    p113.setRadius(-13);
     // test of member function: setColor()
     Color color1(0, 0, 0);
     p13.setColor(color1);
