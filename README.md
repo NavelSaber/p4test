@@ -230,6 +230,7 @@ void test_Circle(){
     
 }
 
+
 void test_Line(){
     // test of default constructor
     Point pp12(22, 34);
@@ -274,36 +275,106 @@ void test_Line(){
     // test of member function: setCenter()
     Point a(5, 0);
     p13.setStart(a);
+    p13.write(cout);
+    p23.write(cout);
+    p33.write(cout);
+    p43.write(cout);
+    p53.write(cout);
     Point b(0, 0);
     p23.setStart(b);
+    p13.write(cout);
+    p23.write(cout);
+    p33.write(cout);
+    p43.write(cout);
+    p53.write(cout);
     Point c(100, 100);
     p33.setStart(c);
+    p13.write(cout);
+    p23.write(cout);
+    p33.write(cout);
+    p43.write(cout);
+    p53.write(cout);
     Point d(5, 0);
     p43.setStart(d);
+    p13.write(cout);
+    p23.write(cout);
+    p33.write(cout);
+    p43.write(cout);
+    p53.write(cout);
     Point e(67, 35);
     p53.setStart(e);
+    p13.write(cout);
+    p23.write(cout);
+    p33.write(cout);
+    p43.write(cout);
+    p53.write(cout);
     // test of member function: setRadius()
     Point a1(15, 6);
+    p13.write(cout);
+    p23.write(cout);
+    p33.write(cout);
+    p43.write(cout);
+    p53.write(cout);
     p13.setEnd(a1);
     Point b1(4, 27);
     p23.setEnd(b1);
+    p13.write(cout);
+    p23.write(cout);
+    p33.write(cout);
+    p43.write(cout);
+    p53.write(cout);
     Point c1(100, 100);
     p33.setEnd(c1);
+    p13.write(cout);
+    p23.write(cout);
+    p33.write(cout);
+    p43.write(cout);
+    p53.write(cout);
     Point d1(5, 7);
     p43.setEnd(d1);
+    p13.write(cout);
+    p23.write(cout);
+    p33.write(cout);
+    p43.write(cout);
+    p53.write(cout);
     Point e1(67, 34);
     p53.setEnd(e1);
+    p13.write(cout);
+    p23.write(cout);
+    p33.write(cout);
+    p43.write(cout);
+    p53.write(cout);
     // test of member function: setColor()
     Color color1(0, 0, 0);
     p13.setColor(color1);
+    p13.write(cout);
+    p23.write(cout);
+    p33.write(cout);
+    p43.write(cout);
+    p53.write(cout);
     Color color2(255, 0, 0);
     p23.setColor(color2);
+    p13.write(cout);
+    p23.write(cout);
+    p33.write(cout);
+    p43.write(cout);
+    p53.write(cout);
     Color color3(0, 255, 0);
     p33.setColor(color3);
+    p13.write(cout);
+    p23.write(cout);
+    p33.write(cout);
+    p43.write(cout);
+    p53.write(cout);
     Color color4(0, 0, 255);
     p43.setColor(color4);
+    p13.write(cout);
+    p23.write(cout);
+    p33.write(cout);
+    p43.write(cout);
+    p53.write(cout);
     Color color5(255, 255, 255);
-    p53.setColor(color4);
+    p53.setColor(color5);
     Color color6(67, 2, 99);
     
     // test of member functions getX() and getY()
