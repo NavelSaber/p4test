@@ -85,7 +85,7 @@ void test_Color(){
     // test of default constructor
     Color p11;
     cout << p11 << endl;
-    Cikir p91;
+    Color p91;
     
     
     
@@ -159,16 +159,30 @@ void test_Color(){
     
     
 }
-
 void test_Circle(){
     
     // test of default constructor
+    Point pp2(23, 23);
+    Point pp3(87, 10);
+    Point pp4(78, 67);
+    Point pp5(38, 35);
+    
+    Color cc2(25, 134, 43);
+    Color cc3(25, 134, 43);
+    Color cc4(25, 134, 43);
+    Color cc5(25, 134, 43);
+    
     Circle p13;
-    Circle p23;
-    Circle p33;
-    Circle p43;
-    Circle p53;
+    Circle p23(pp2, 5, cc2);
+    Circle p33(pp3, 13, cc3);
+    Circle p43(pp4, 43, cc4);
+    Circle p53(pp5, 2, cc5);
+    
     cout << p13.getCenter() << p13.getRadius() << p13.getColor() << endl;
+    cout << p23.getCenter() << p23.getRadius() << p23.getColor() << endl;
+    cout << p33.getCenter() << p33.getRadius() << p33.getColor() << endl;
+    cout << p43.getCenter() << p43.getRadius() << p43.getColor() << endl;
+    cout << p53.getCenter() << p53.getRadius() << p53.getColor() << endl;
     
     Point pppp(23,6);
     Color pppc(23, 53, 234);
@@ -218,17 +232,44 @@ void test_Circle(){
 
 void test_Line(){
     // test of default constructor
-    Line p13;
-    Line p23;
-    Line p33;
-    Line p43;
-    Line p53;
-    cout << p13.getStart() << p13.getEnd() << p13.getColor() << endl;
+    Point pp12(22, 34);
+    Point pp13(26, 43);
+    Point pp14(73, 35);
+    Point pp15(34, 96);
     
+    Point pp22(23, 34);
+    Point pp23(28, 89);
+    Point pp24(99, 5);
+    Point pp25(2, 0);
+    
+    Color cc2(145, 45, 95);
+    Color cc3(67, 243, 167);
+    Color cc4(97, 45, 97);
+    Color cc5(75, 55, 212);
+    
+    Line p13;
+    Line p23(pp12, pp22, cc2);
+    Line p33(pp13, pp23, cc3);
+    Line p43(pp14, pp24, cc4);
+    Line p53(pp15, pp25, cc5);
+    cout << p13.getStart() << p13.getEnd() << p13.getColor() << endl;
+    cout << p23.getStart() << p23.getEnd() << p23.getColor() << endl;
+    cout << p33.getStart() << p33.getEnd() << p33.getColor() << endl;
+    cout << p43.getStart() << p43.getEnd() << p43.getColor() << endl;
+    cout << p53.getStart() << p53.getEnd() << p53.getColor() << endl;
+    
+    p13.write(cout);
+    p23.write(cout);
+    p33.write(cout);
+    p43.write(cout);
+    p53.write(cout);
     
     // test of the other constructor
-    Circle ppp;
-    cout << ppp << endl;
+    Point ppps(24, 34);
+    Point pppe(57, 96);
+    Color pppc(234, 56, 99);
+    Line ppp(ppps, pppe, pppc);
+    cout << ppp.getStart() << ppp.getEnd() << ppp.getColor() << endl;
     
     // test of member function: setCenter()
     Point a(5, 0);
@@ -242,11 +283,16 @@ void test_Line(){
     Point e(67, 35);
     p53.setStart(e);
     // test of member function: setRadius()
-    p13.getEnd();
-    p23.getEnd();
-    p33.getEnd();
-    p43.getEnd();
-    p53.getEnd();
+    Point a1(15, 6);
+    p13.setEnd(a1);
+    Point b1(4, 27);
+    p23.setEnd(b1);
+    Point c1(100, 100);
+    p33.setEnd(c1);
+    Point d1(5, 7);
+    p43.setEnd(d1);
+    Point e1(67, 34);
+    p53.setEnd(e1);
     // test of member function: setColor()
     Color color1(0, 0, 0);
     p13.setColor(color1);
@@ -267,10 +313,18 @@ void test_Line(){
     cout << p43.getStart() << p43.getEnd() << p43.getColor() << endl;
     cout << p53.getStart() << p53.getEnd() << p53.getColor() << endl;
     
+    p13.write(cout);
+    p23.write(cout);
+    p33.write(cout);
+    p43.write(cout);
+    p53.write(cout);
     
 }
 
 void test_Rectangle(){
+    
+    Rectangle r1;
+    cout << r1.getStart() << r1.getEnd() << r1.getColorTopLeft() << r1.getColorTopRight() << r1.getColorBottomRight() << r1.getColorBottomLeft();
     
     Point v11(20,0);
     Point v21(21,2);
@@ -279,8 +333,17 @@ void test_Rectangle(){
     Color c21(157, 130, 250);
     Color c31(43, 170, 230);
     
+    Rectangle r2(v11, v21, c01);
+    cout << r2.getStart() << r2.getEnd() << r2.getColorTopLeft() << r2.getColorTopRight() << r2.getColorBottomRight() << r2.getColorBottomLeft();
+    
     Rectangle t1(v11, v21, c01, c11, c21, c31);
     cout << t1.getStart() << t1.getEnd() << t1.getColorTopLeft() << t1.getColorTopRight() << t1.getColorBottomRight() << t1.getColorBottomLeft();
+    
+    Point v42(94,93);
+    Point v43(93,39);
+    Point v44(27,35);
+    Point v45(1,66);
+    Point v46(47,65);
     
     Point v41(0,0);
     Point v51(1,2);
@@ -289,10 +352,46 @@ void test_Rectangle(){
     Color c51(150, 150, 150);
     Color c61(50, 100, 150);
     
+    Color c81(34, 76, 278);
+    Color c82(24, 154, 145);
+    Color c83(4, 65, 67);
+    Color c84(37, 43, 265);
+    Color c85(234, 78, 234);
+    
     t1.setStart(v41);
     cout << t1.getStart() << t1.getEnd() << t1.getColorTopLeft() << t1.getColorTopRight() << t1.getColorBottomRight() << t1.getColorBottomLeft();
     
+    t1.setStart(v42);
+    cout << t1.getStart() << t1.getEnd() << t1.getColorTopLeft() << t1.getColorTopRight() << t1.getColorBottomRight() << t1.getColorBottomLeft();
+    
+    t1.setStart(v43);
+    cout << t1.getStart() << t1.getEnd() << t1.getColorTopLeft() << t1.getColorTopRight() << t1.getColorBottomRight() << t1.getColorBottomLeft();
+    
+    t1.setStart(v44);
+    cout << t1.getStart() << t1.getEnd() << t1.getColorTopLeft() << t1.getColorTopRight() << t1.getColorBottomRight() << t1.getColorBottomLeft();
+    
+    t1.setStart(v45);
+    cout << t1.getStart() << t1.getEnd() << t1.getColorTopLeft() << t1.getColorTopRight() << t1.getColorBottomRight() << t1.getColorBottomLeft();
+    
+    t1.setStart(v46);
+    cout << t1.getStart() << t1.getEnd() << t1.getColorTopLeft() << t1.getColorTopRight() << t1.getColorBottomRight() << t1.getColorBottomLeft();
+    
     t1.setEnd(v51);
+    cout << t1.getStart() << t1.getEnd() << t1.getColorTopLeft() << t1.getColorTopRight() << t1.getColorBottomRight() << t1.getColorBottomLeft();
+    
+    t1.setColor(c81);
+    cout << t1.getStart() << t1.getEnd() << t1.getColorTopLeft() << t1.getColorTopRight() << t1.getColorBottomRight() << t1.getColorBottomLeft();
+    
+    t1.setColor(c82);
+    cout << t1.getStart() << t1.getEnd() << t1.getColorTopLeft() << t1.getColorTopRight() << t1.getColorBottomRight() << t1.getColorBottomLeft();
+    
+    t1.setColor(c83);
+    cout << t1.getStart() << t1.getEnd() << t1.getColorTopLeft() << t1.getColorTopRight() << t1.getColorBottomRight() << t1.getColorBottomLeft();
+    
+    t1.setColor(c84);
+    cout << t1.getStart() << t1.getEnd() << t1.getColorTopLeft() << t1.getColorTopRight() << t1.getColorBottomRight() << t1.getColorBottomLeft();
+    
+    t1.setColor(c85);
     cout << t1.getStart() << t1.getEnd() << t1.getColorTopLeft() << t1.getColorTopRight() << t1.getColorBottomRight() << t1.getColorBottomLeft();
     
     t1.setColorTopLeft(c71);
